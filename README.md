@@ -111,6 +111,26 @@ Ladder logic networks, in process order:
 **Network 11 — Current State Lamp Output**
 ![Network 11](screenshots/network-11.png)
 
+## FB_MES_Interface — Simulated MES Networks
+
+The MES interface block simulates recipe delivery with a realistic request/response delay, rather than responding instantly:
+
+**Network 1 — Preparation for the Next Sequence**
+`ExpectedSequenceRef` is a plain incrementing number — no string prefix or formatting — kept as a bare `DInt` and incremented directly via `ADD`, triggered by `NextSeqTrigger` once the prior request/response cycle completes.
+![MES Network 1](screenshots/mes-network-01.png)
+
+**Network 2 — Recipe Request Received**
+Edge-detects the station's `RequestRecipe` signal and sets `RecipeRequestPending`, resetting `RecipeReceived` for the new cycle.
+![MES Network 2](screenshots/mes-network-02.png)
+
+**Network 3 — Recipe Delay**
+An `800ms` `TON` timer simulates a realistic MES response delay rather than an instantaneous reply.
+![MES Network 3](screenshots/mes-network-03.png)
+
+**Network 4 — Sending the Recipe**
+On timer completion, delivers torque min/max and required-step counts for both fog lamp and rear camera stages, then sets `RecipeReceived` and clears `RecipeRequestPending`.
+![MES Network 4](screenshots/mes-network-04.png)
+
 ## Signature Elements
 
 1. **Sequence gating** — the station only accepts the *next expected* sequence reference for the incoming bumper; any other value is rejected as a duplicate/out-of-order scan. The expected value is generated and incremented inside `FB_MES_Interface` (via `NextSeqTrigger`, fired once a request/response cycle completes) so each accepted part immediately arms the correct expected value for the next one.
