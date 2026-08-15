@@ -73,43 +73,43 @@ Any stage can fault out to a dedicated `FAULT` state with its own alarm code (se
 Ladder logic networks, in process order:
 
 **Network 1 — Emergency Stop & Safety Reset**
-![Network 1](screenshots/Network%201%20-%20Emergency%20Stop%20%26%20Safety-Reset.png)
+![Network 1](screenshots/network-01.png)
 
 **Network 2 — Barcode Scan**
-![Network 2](screenshots/Network%202%20-%20Barcode-Scan.png)
+![Network 2](screenshots/network-02.png)
 
 **Network 3 — Duplicate Scan Check**
-![Network 3](screenshots/Network%203%20-%20Different%20Duplicate%20Scan%20Check.png)
+![Network 3](screenshots/network-03.png)
 
 **Network 4 — Expected Value (MES) vs. Scanned Value Check**
-![Network 4](screenshots/Network%204%20-%20Expected%20Value%20%28MES%29%20vs%20Scanned%20Value%20Check.png)
+![Network 4](screenshots/network-04.png)
 
 **Network 5 — Request Recipe to MES**
-![Network 5](screenshots/Network%205%20-%20Request%20Recipe%20to%20MES.png)
+![Network 5](screenshots/network-05.png)
 
 **Network 6 — Receive Recipe from MES**
-![Network 6](screenshots/Network%206%20-%20Receive%20Recipe%20from%20MES.png)
+![Network 6](screenshots/network-06.png)
 
 **Network 7 — Edge-Memory Bit for P_TRIG on TorqueOK**
-![Network 7](screenshots/Network%207%20-Edge-memory%20bit%20for%20P_TRIG%20on%20TorqueOK.png)
+![Network 7](screenshots/network-07.png)
 
 **Network 8 (1) — Fog Lamp Part Verification & Tightening, Process Running**
-![Network 8 part 1](screenshots/Network%208%20%281%29%20-%20Fog%20Lamp%20Part%20Verification%2C%20Process%20Running.png)
+![Network 8 part 1](screenshots/network-08a.png)
 
 **Network 8 (2) — Fog Lamp Part Verification & Tightening, Process Running**
-![Network 8 part 2](screenshots/Network%208%20%282%29%20-%20Fog%20Lamp%20Part%20Verification%2C%20Process%20Running.png)
+![Network 8 part 2](screenshots/network-08b.png)
 
 **Network 9 (1) — Rear Camera Part Verification & Tightening, Process Running**
-![Network 9 part 1](screenshots/Network%209%20%281%29%20-%20Rear%20Camera%20Part%20Verification%2C%20Process%20Running.png)
+![Network 9 part 1](screenshots/network-09a.png)
 
 **Network 9 (2) — Rear Camera Part Verification & Tightening, Process Running**
-![Network 9 part 2](screenshots/Network%209%20%282%29%20-%20Rear%20Camera%20Part%20Verification%2C%20Process%20Running.png)
+![Network 9 part 2](screenshots/network-09b.png)
 
 **Network 10 — Release Part & Conveyor**
-![Network 10](screenshots/Network%2010%20-%20Release%20Part%20%26%20Conveyor.png)
+![Network 10](screenshots/network-10.png)
 
 **Network 11 — Current State Lamp Output**
-![Network 11](screenshots/Network%2011%20-%20Current%20State%20Lamp.png)
+![Network 11](screenshots/network-11.png)
 
 ## Signature Elements
 
