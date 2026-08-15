@@ -17,19 +17,19 @@ The demo shows a full cycle end-to-end in PLCSIM: sequence acceptance, both veri
 ## Architecture
 
 ```
-┌─────────────────────┐        ┌──────────────────────┐
+┌──────────────────────┐        ┌───────────────────────┐
 │  FB_StationController│◄──────►│   FB_MES_Interface    │
 │  (state machine,     │        │  (simulated MES:      │
 │   process logic)     │        │   recipe, sequence,   │
-│                       │        │   part-presence data) │
-└─────────┬────────────┘        └──────────────────────┘
+│                      │        │   part-presence data) │
+└─────────┬────────────┘        └───────────────────────┘
           │
           ▼
      Main [OB1]
           │
           ▼
   ┌───────────────┐      (v2)      ┌──────────────┐
-  │  WinCC HMI     │ ─────────────► │  Operator UI  │
+  │  WinCC HMI    │ ─────────────► │  Operator UI │
   └───────────────┘                └──────────────┘
           │
           ▼ (v3)
